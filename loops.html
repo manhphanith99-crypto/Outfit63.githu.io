@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body>
+   <h3>JavaScript Math Object Examples</h3>
+   <form>
+    Enter first number: <input type="text" id="num1"><br/>
+    Enter second number: <input type="text" id="num2"><br/>
+    Enter third number: <input type="text" id="num3"><br/>
+    <button type="button" onclick="calculate()">Calculate</button>
+   </form>
+   <div id="result"></div>
+ 
+    <script>
+
+    function calculate() {
+        var x = document.getElementById("num1").value;
+        var y = document.getElementById("num2").value;
+        var z = document.getElementById("num3").value;
+        var total = Number(x) + Number(y) + Number(z);
+        var avg = total/3;
+        if(avg<60){
+            var r = "F";
+        }else{
+            var r = "P";
+        }
+        if(avg<60){ grade = "F"; }
+        else if(avg<=70){ grade = "E"; }
+        else if(avg<=80){ grade = "D"; }
+        else if(avg<=90){ grade = "C"; }
+        else if(avg<=95){ grade = "B"; }
+        else{ grade = "A"; }
+        document.getElementById("result").innerHTML = "Total = " + total + "<br/> Average = " + avg.toFixed(2) + "<br/> Result = " + r + "<br/> Grade = " + grade;
+    }
+   </script>
+</body>
+</html>
